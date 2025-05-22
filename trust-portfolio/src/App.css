@@ -470,6 +470,10 @@
 }
 
 
+hr{
+  z-index: 10000;
+}
+
 
 
 /* ______________________________________________ABOUT___________________________________________________ */
@@ -909,11 +913,11 @@
 .vertical-divide {
   width: 3px;
   height: 100%;
-  background-color: #4b6cb7; /* Blue accent line */
+  background-color: #4b6cb7; 
 }
 
 .experience {
-  background-color: #1a1a1a; /* Slightly lighter than background */
+  background-color: #1a1a1a; 
   padding: 1.5rem;
   border-radius: 1rem;
   margin-bottom: 2rem;
@@ -972,178 +976,6 @@
 
 /* __________________________________________CONTACT_____________________________________________________ */
 
-/* .contact {
-  width: 100%;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  padding-top: 4rem;
-}
-
-.contact-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-  padding: 60px 1rem;
-  box-sizing: border-box;
-}
-
-.contact-container span {
-  color: #D76627;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-}
-
-.form {
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 0 1rem;
-  box-sizing: border-box;
-}
-
-.form input {
-  padding: 10px;
-  background-color: transparent;
-  color: #ffffff;
-  border: none;
-  border-bottom: 2px solid #61dafb;
-  outline: none;
-}
-
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
-  -webkit-text-fill-color: white !important;
-  background-color: transparent !important;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-
-.form textarea {
-  height: 150px;
-  padding: 10px;
-  border: 2px solid #61dafb;
-  background-color: transparent;
-  outline: none;
-  color: #ffffff;
-  resize: vertical;
-}
-
-.form button {
- margin-top: 1rem;
-  margin-left: 9.5rem;
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: #D76627;
-  color: #ffffff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-.form button:hover {
-  background-color: #79340f;
-  color: #61dafb;
-}
-
-.bg-circle1,
-.bg-circle2 {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border: 25px solid #2d303d;
-  border-radius: 50%;
-  z-index: 0;
-}
-
-.bg-circle1 {
-  top: 0;
-  left: -300px;
-}
-
-.bg-circle2 {
-  top: 200px;
-  right: -300px;
-}
-
-.alternative-contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-}
-
-@media (max-width: 768px) {
-  .form {
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  .form button {
-    margin-right: 0;
-    align-self: flex-start;
-  }
-
-
-}
-
-  /* Responsive circle styling */
-  /* @media (max-width: 1000px) {
-  .bg-circle1,
-  .bg-circle2 {
-    width: 70vw;
-    height: 70vw;
-    border: 4vw solid #2d303d;
-  }
-
-  .bg-circle1 {
-  
-    top: 100vh;
-    left: 50%;
-    transform: translateX(-50%);
-  
-  }
-
-  .bg-circle2 {
-    display: none;
-  }
-
-    .alternative-contact{
-      padding-top: 150px;
-      font-size: small;
-    }
-
-  }
-
-
-@media (max-width: 600px) {
-  .alternative-contact{
-      padding-top: 100px;
-      font-size: small;
-    }
-}
-
-@media (max-width: 500px) {
-  .alternative-contact{
-      padding-top: px;
-      font-size: small;
-    } */
-
-
     /* CONTACT SECTION */
 
 .contact {
@@ -1169,7 +1001,7 @@ input:-webkit-autofill {
 }
 
 .contact-container h1 span {
-  color: #38bdf8; /* Tailwind blue or a tech-accent color */
+  color: #38bdf8;
 }
 
 .contact-form {
