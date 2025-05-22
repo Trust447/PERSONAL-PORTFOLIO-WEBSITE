@@ -35,7 +35,7 @@ const Home = () => {
 
           <div className="home-skill-icons-container">
             <div className="home-skill-icon icon1">
-              <FaReact size={30} color="#61DBFB" />
+              <FaReact size={20} color="#61DBFB" />
             </div>
             <div className="home-skill-icon icon2">
               <FaNodeJs size={30} color="#68A063" />
