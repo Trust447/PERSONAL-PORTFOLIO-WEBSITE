@@ -2,6 +2,7 @@ import React from 'react';
 
 const experienceData = [
   {
+    id: 1,
     title: 'Trust Footwear',
     role: 'Frontend Developer',
     responsibilities: [
@@ -12,6 +13,7 @@ const experienceData = [
     ],
   },
   {
+    id: 2,
     title: 'To Do Manager App',
     role: 'Fullstack Developer',
     responsibilities: [
@@ -22,6 +24,7 @@ const experienceData = [
     ],
   },
   {
+    id: 3,
     title: 'Blog API ',
     role: 'Backend Developer',
     responsibilities: [
@@ -32,6 +35,7 @@ const experienceData = [
     ]
   },
   {
+    id: 4,
     title: 'Responsive Portfolio Website',
     role: 'Frontend Developer',
     responsibilities: [
@@ -44,7 +48,7 @@ const experienceData = [
 ];
 
 const ExperienceCard = ({ title, role, responsibilities }) => (
-  <div id='Experience' className="experience">
+  <div className="experience">
     <div>
       <h3>{title}</h3>
       <h3 className="title">
@@ -55,7 +59,7 @@ const ExperienceCard = ({ title, role, responsibilities }) => (
       <h4>Responsibilities:</h4>
       <ul>
         {responsibilities.map((item, idx) => (
-          <li key={idx}>{item}</li>
+          <li key={`${item}-${idx}`}>{item}</li>
         ))}
       </ul>
     </div>
@@ -73,8 +77,8 @@ const Experience = () => {
 
       <div className="experiences">
         <div className="left-experiences">
-          {experienceData.slice(0, 2).map((exp, idx) => (
-            <ExperienceCard key={idx} {...exp} />
+          {experienceData.slice(0, 2).map((exp) => (
+            <ExperienceCard key={exp.id} {...exp} />
           ))}
         </div>
 
@@ -83,8 +87,8 @@ const Experience = () => {
         </div>
 
         <div className="right-experiences">
-          {experienceData.slice(2).map((exp, idx) => (
-            <ExperienceCard key={idx + 2} {...exp} />
+          {experienceData.slice(2).map((exp) => (
+            <ExperienceCard key={exp.id} {...exp} />
           ))}
         </div>
       </div>

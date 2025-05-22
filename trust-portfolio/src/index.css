@@ -29,9 +29,9 @@ a {
   color: #ffff;
   text-decoration: inherit;
 }
-a:hover {
+/* a:hover {
   color: #D76627;
-}
+} */
 
 body {
   margin: 0;

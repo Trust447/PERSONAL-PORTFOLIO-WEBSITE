@@ -1,34 +1,80 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import 'flag-icons/css/flag-icons.min.css';
 
 const About = () => {
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            observer.unobserve(entry.target); // Animate only once
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    cardsRef.current.forEach(card => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const items = [
+    {
+      id: 'nationality',
+      title: "Nationality",
+      iconClass: "fi fi-ng",
+      label: "Nigeria",
+    },
+    {
+      id: 'education',
+      title: "Education",
+      image: "uniuyo.png",
+      label: "University Of Uyo",
+    },
+    {
+      id: 'language',
+      title: "Language",
+      iconClass: "fi fi-gb",
+      label: "Native",
+    },
+  ];
+
   return (
-    <div id="About" className='about-container'>
-        <div className='title'>
-            <h2>AboutMe <span>()</span></h2>
-        </div>
-        <div className='about-card'>
-            <div className="card">
-                <h3><span>{"<"}</span>Nationality <span>{" />"}</span></h3>
-                <span className="fi fi-ng" style={{ fontSize: '80px' }}></span>
-
-                <h4>Nigeria</h4>
-            </div>
-
-            <div className="card">
-                <h3><span>{"<"}</span>Education <span>{" />"}</span></h3>
-                <img src="uniuyo.png" alt="university of uyo" />
-                <h4>University Of Uyo</h4>
-            </div>
-
-            <div className="card">
-                <h3><span>{"<"}</span>Language <span>{" />"}</span></h3>
-                <span className="fi fi-gb" style={{ fontSize: '80px' }}></span>
-                <h4>Native</h4>
-            </div>
-        </div>
+    <div id="About" className="about-container">
+      <div className="title">
+        <h2>
+          AboutMe <span>()</span>
+        </h2>
+      </div>
+      <div className="about-card">
+        {items.map((item, index) => (
+          <div
+            className="card"
+            key={item.id}
+            ref={el => (cardsRef.current[index] = el)}
+          >
+            <h3>
+              <span>{"<"}</span>
+              {item.title}
+              <span>{" />"}</span>
+            </h3>
+            {item.image ? (
+              <img src={item.image} alt={item.label} />
+            ) : (
+              <span className={item.iconClass} style={{ fontSize: "80px" }}></span>
+            )}
+            <h4>{item.label}</h4>
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

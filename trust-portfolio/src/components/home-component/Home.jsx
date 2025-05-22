@@ -16,7 +16,7 @@ const Home = () => {
             Ihemebiri<span>{"/>"}</span>
           </h1>
           <p className="second-paragraph">Software Engineer</p>
-          <a href="/resume.pdf" download className="resume-button">
+          <a href="/Trust Ihemebiri.pdf" download className="resume-button">
             <img
               src="https://img.icons8.com/ios-filled/24/000000/download--v1.png"
               alt="Download icon"
