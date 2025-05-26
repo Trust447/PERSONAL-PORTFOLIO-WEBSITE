@@ -1,4 +1,8 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import "./skills-styles.css"
+
 import {
   FaHtml5,
   FaCss3Alt,
@@ -58,40 +62,91 @@ const stackRight = [
   ]
 ];
 
-const Skills = () => (
-  <div id="Skills" className="skills-container">
-    <div className="title">
-      <h2>TechStack <span>()</span></h2>
-    </div>
+// Variants for each skill icon (fade + scale)
+const skillIconVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.4, ease: 'easeOut' }
+  }
+};
 
-    <div className="stack">
-      {/* Left stack-items */}
-      <div className="stack-items">
-        {stackLeft.map((group, i) => (
-          <div key={i} className="skills">
-            {group.map(({ Icon, color, title }, idx) => (
-              <div key={idx} className="skill-icon" title={title}>
-                <Icon size={60} color={color} />
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
+// Variants for each group (row) of skills (stagger children)
+const skillGroupVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { staggerChildren: 0.2, ease: 'easeOut' }
+  }
+};
 
-      {/* Right stack-items */}
-      <div className="stack-items">
-        {stackRight.map((group, i) => (
-          <div key={i} className="skills">
-            {group.map(({ Icon, color, title }, idx) => (
-              <div key={idx} className="skill-icon" title={title}>
-                <Icon size={60} color={color} />
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
+const Skills = () => {
+  // triggerOnce removed here to allow animation every time section scrolls into view
+  const { ref, inView } = useInView({ threshold: 0.1 });
+
+  return (
+    <div id="Skills" className="skills-container" ref={ref}>
+      {/* Title with animation */}
+      <motion.div
+        className="title"
+        initial={{ opacity: 0, y: 30 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2>TechStack <span>()</span></h2>
+      </motion.div>
+
+      {/* Stack container with staggered group animation */}
+      <motion.div
+        className="stack"
+        initial="hidden"
+        animate={inView ? 'visible' : 'hidden'}
+        variants={{ visible: { transition: { staggerChildren: 0.4 } } }}
+      >
+        {/* Left side skill groups */}
+        <div className="stack-items">
+          {stackLeft.map((group, i) => (
+            <motion.div key={i} className="skills" variants={skillGroupVariants}>
+              {group.map(({ Icon, color, title }, idx) => (
+                <motion.div
+                  key={idx}
+                  className="skill-icon"
+                  title={title}
+                  variants={skillIconVariants}
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  <Icon size={60} color={color} />
+                </motion.div>
+              ))}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Right side skill groups */}
+        <div className="stack-items">
+          {stackRight.map((group, i) => (
+            <motion.div key={i} className="skills" variants={skillGroupVariants}>
+              {group.map(({ Icon, color, title }, idx) => (
+                <motion.div
+                  key={idx}
+                  className="skill-icon"
+                  title={title}
+                  variants={skillIconVariants}
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  <Icon size={60} color={color} />
+                </motion.div>
+              ))}
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Skills;

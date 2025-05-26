@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { FaWhatsapp, FaTelegram } from 'react-icons/fa';
+import "./contact-styles.css"
 
 const Contact = () => {
   const form = useRef();

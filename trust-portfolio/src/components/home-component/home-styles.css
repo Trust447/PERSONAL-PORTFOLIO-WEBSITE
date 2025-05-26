@@ -1,0 +1,170 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222; 
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10rem; 
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 0; 
+}
+
+
+.introduction {
+  flex: 1 1 300px;
+  max-width: 400px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.introduction p {
+  font-size: 1.5rem;  
+  margin-bottom: 0;   
+  color: #555; 
+}
+
+.name {
+  font-size: 3.5rem;  
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+  color: #555; 
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+.name span {
+  color: #1e90ff; 
+}
+
+.last-name {
+  color: #1e90ff;
+  padding-left: 2rem; 
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+.second-paragraph {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: #333;
+  padding-left: 9.8rem;
+}
+
+
+.resume-button {
+  margin-top: 1rem;
+  margin-left: 15.5rem;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  background-color: #1e90ff; 
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(30, 144, 255, 0.3);
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #0c61d9;
+  color: #333;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(30, 144, 255, 0.4);
+}
+
+
+.image-container {
+  position: relative;
+  flex: 1 1 350px;
+  max-width: 400px;
+  height: 400px;
+  animation: scaleIn 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}  
+
+/* Circle behind the image */
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle at center, #1e90ff44, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  box-shadow: 0 0 60px rgba(30, 144, 255, 0.4);
+}
+
+/* Crop container for the photo */
+.crop {
+  width: 350px;
+  height: 440px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+} 
+
+.trust {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+.name {
+  font-size: 3.5rem;  
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+  color: #555; 
+}
+
+.last-name {
+  color: #1e90ff;
+  padding-left: 2rem; 
+}
+
+.image-container {
+  position: relative;
+  flex: 1 1 350px;
+  max-width: 400px;
+  height: 400px;
+}
+
+
+
+hr{
+  z-index: 2;
+} 
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

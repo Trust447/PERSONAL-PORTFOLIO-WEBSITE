@@ -1,0 +1,77 @@
+.about-container {
+  background-color: #111320;
+  color: #fff;
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-container .title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-container .title h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.about-container .title span {
+  color: #38bdf8;
+}
+
+.about-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #111;
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.card h3 span {
+  color: #fff;
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.card .fi {
+  margin-bottom: 1rem;
+}
+
+.card h4 {
+  font-size: 1rem;
+  color: #ddd;
+} 
