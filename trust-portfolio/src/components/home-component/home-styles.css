@@ -1,11 +1,10 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  padding-top: 8rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding: 8rem 4rem 0 4rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #222; 
+  color: #222;
+  gap: 2rem; /* added consistent vertical spacing */
 }
 
 .home {
@@ -14,12 +13,11 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10rem; 
+  gap: 8rem; /* slightly reduced gap for balance */
   max-width: 1100px;
   margin: 0 auto;
-  padding-top: 0; 
+  padding-top: 0;
 }
-
 
 .introduction {
   flex: 1 1 300px;
@@ -27,33 +25,34 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem; /* increased gap for better spacing */
 }
 
 .introduction p {
-  font-size: 1.5rem;  
-  margin-bottom: 0;   
-  color: #555; 
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  color: #555;
+  line-height: 1.6; /* better readability */
 }
 
 .name {
-  font-size: 3.5rem;  
+  font-size: 3.5rem;
   font-weight: 900;
-  line-height: 1;
+  line-height: 1.1;
   margin: 0;
-  color: #555; 
+  color: #555;
   animation: fadeInUp 1s ease forwards;
   opacity: 0;
   animation-delay: 0.4s;
 }
 
 .name span {
-  color: #1e90ff; 
+  color: #1e90ff;
 }
 
 .last-name {
   color: #1e90ff;
-  padding-left: 2rem; 
+  padding-left: 2rem;
   animation: fadeInUp 1s ease forwards;
   opacity: 0;
   animation-delay: 0.6s;
@@ -65,8 +64,8 @@
   margin-top: 0.5rem;
   color: #333;
   padding-left: 9.8rem;
+  line-height: 1.5;
 }
-
 
 .resume-button {
   margin-top: 1rem;
@@ -75,7 +74,7 @@
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 1.2rem;
-  background-color: #1e90ff; 
+  background-color: #1e90ff;
   color: white;
   font-weight: 600;
   border-radius: 5px;
@@ -91,7 +90,6 @@
   box-shadow: 0 5px 15px rgba(30, 144, 255, 0.4);
 }
 
-
 .image-container {
   position: relative;
   flex: 1 1 350px;
@@ -100,7 +98,7 @@
   animation: scaleIn 1s ease forwards;
   opacity: 0;
   animation-delay: 0.6s;
-}  
+}
 
 /* Circle behind the image */
 .circle {
@@ -123,7 +121,7 @@
   overflow: hidden;
   margin: 0 auto;
   position: relative;
-} 
+}
 
 .trust {
   width: 100%;
@@ -131,32 +129,9 @@
   object-fit: cover;
 }
 
-
-.name {
-  font-size: 3.5rem;  
-  font-weight: 900;
-  line-height: 1;
-  margin: 0;
-  color: #555; 
-}
-
-.last-name {
-  color: #1e90ff;
-  padding-left: 2rem; 
-}
-
-.image-container {
-  position: relative;
-  flex: 1 1 350px;
-  max-width: 400px;
-  height: 400px;
-}
-
-
-
-hr{
+hr {
   z-index: 2;
-} 
+}
 
 @keyframes fadeInUp {
   0% {
@@ -169,10 +144,10 @@ hr{
   }
 }
 
-
 @media (max-width: 768px) {
   .home-container {
     padding: 4rem 1rem;
+    gap: 2rem; /* consistent vertical spacing */
   }
 
   .home {
