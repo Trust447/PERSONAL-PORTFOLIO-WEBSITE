@@ -1,4 +1,5 @@
 .home-container {
+  border-top: 2px solid red;
   display: flex;
   flex-direction: column;
   padding: 8rem 4rem 0 4rem;
