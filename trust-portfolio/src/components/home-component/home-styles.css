@@ -25,7 +25,7 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* increased gap for better spacing */
+  gap: 1rem; /* increased gap for better spacing */
 }
 
 .introduction p {
