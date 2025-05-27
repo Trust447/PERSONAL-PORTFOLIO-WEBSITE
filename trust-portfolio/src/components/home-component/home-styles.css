@@ -146,6 +146,7 @@ hr {
 
 @media (max-width: 768px) {
   .home-container {
+    padding-top:4rem;
     padding: 4rem 1rem;
     gap: 2rem; /* consistent vertical spacing */
   }
