@@ -168,3 +168,53 @@ hr{
     transform: translateY(0);
   }
 }
+
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 4rem 1rem;
+  }
+
+  .home {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .introduction {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .second-paragraph {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .resume-button {
+    margin: 1rem auto 0;
+  }
+
+  .image-container {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .crop {
+    width: 100%;
+    height: auto;
+  }
+
+  .trust {
+    width: 100%;
+    height: auto;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .last-name {
+    padding-left: 0;
+  }
+}
