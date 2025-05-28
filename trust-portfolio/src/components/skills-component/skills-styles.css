@@ -61,6 +61,5 @@
   .skills {
     flex-wrap: wrap;
     justify-content: center;
-    width: 10px;
   }
 } 
