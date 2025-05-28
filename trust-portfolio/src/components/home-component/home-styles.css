@@ -193,3 +193,9 @@ hr {
     padding-left: 0;
   }
 }
+
+hr {
+  border: none;
+  margin: 0 auto;
+  margin-top: -5px;
+}
