@@ -180,6 +180,12 @@ hr {
     height: auto;
   }
 
+  hr {
+  border: none;
+  margin: 0 auto;
+  margin-top: -5px;
+ }
+
   .trust {
     width: 100%;
     height: auto;
@@ -194,8 +200,3 @@ hr {
   }
 }
 
-hr {
-  border: none;
-  margin: 0 auto;
-  margin-top: -5px;
-}
