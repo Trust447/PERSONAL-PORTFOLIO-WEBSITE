@@ -74,7 +74,7 @@ const ExperienceCard = ({ title, role, responsibilities }) => {
       aria-label={`${title} - ${role}`}
     >
       <header>
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         <h4 className="title">
           <span>(</span> {role} <span>)</span>
         </h4>
