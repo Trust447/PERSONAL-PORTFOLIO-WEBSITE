@@ -116,8 +116,40 @@
   }
   .experience{
     width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .experience h3{
+    font-size: 1.2rem;
+  }
+  .experience h4{
+    font-size: 1rem;
+  }
+  .experience h5{
+    font-size: 0.9re;
+  }
+  .experience ul li{
+    font-size: 0.9rem;
+  }
+  .experience ul{
+    padding-left: 1rem;
+  }
+  .experience .title span{
+    font-size: 1.1rem;
+  }
+  .experience h5{
+    font-size: 0.9rem;
+  }
+  .experience h4{
+    font-size: 0.9rem;
+  }
+  .experience h3{
+    font-size: 1.1rem;
+  }
+  .experience .title{
+    margin-top: 0.1rem;
   }
   
+
   
 
 }
