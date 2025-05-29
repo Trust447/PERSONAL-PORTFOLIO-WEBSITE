@@ -69,7 +69,7 @@ const Home = () => {
           <div className="crop">
             <img
               className="trust"
-              src="trust.png"
+              // src="trust.png"
               alt="Trust Ihemebiri"
             />
           </div>
