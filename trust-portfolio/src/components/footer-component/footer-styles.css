@@ -13,3 +13,8 @@
   font-size: 1.6rem;
 }
 
+@media (min-width: 768px) {
+  .footer h3{
+  font-size: 1.2rem;
+}
+}
