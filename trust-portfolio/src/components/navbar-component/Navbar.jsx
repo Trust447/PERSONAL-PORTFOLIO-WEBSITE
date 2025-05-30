@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import { Menu, X, Github, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom'
+import { Menu, X, Github, Linkedin} from 'lucide-react';
 import "./navbar-styles.css"
 
 const Navbar = () => {
@@ -16,16 +17,15 @@ const Navbar = () => {
 
   return (
     <nav className='navbar'>
-      <a href="#Home" className='logo'><img src="logo.png" alt="Trusted Ideas" /></a>
+      <Link to="/" className='logo'><img src="logo.png" alt="Trusted Ideas" /></Link>
 
       <div onClick={toggleMenu} className='menu-icon'> {isOpen ? 'X' : '☰'}</div>
 
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li className='nav-centre-group'>
-          <a href="#Home" onClick={closeMenu} >home</a>
-          <a href="#About" onClick={closeMenu} >about</a>
-          <a href="#Skills" onClick={closeMenu} >skills</a>
-          <a href="#Experience" onClick={closeMenu} >experience</a>
+          <Link to="/" onClick={closeMenu} >home</Link>
+          <Link to="/About" onClick={closeMenu} >about</Link>
+          <Link to="/Project" onClick={closeMenu} >skills</Link>
         </li>
         <li><a href="https://github.com/Trust447" target="_blank" rel="noopener noreferrer">
                 <Github size={20} /></a>
@@ -34,7 +34,7 @@ const Navbar = () => {
           <a href="https://linkedin.com/in/trust-ihemebiri" target="_blank" rel="noopener noreferrer">
                 <Linkedin  size={20}/></a>
         </li>
-        <li><a href="#Contact" className='contact-btn'> contact Me</a></li>
+        <li><Link to="/Contact" className='contact-btn'> contact Me</Link></li>
       </ul>
 
     </nav>
