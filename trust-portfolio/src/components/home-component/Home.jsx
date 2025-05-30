@@ -3,7 +3,7 @@ import { FaNodeJs, FaReact } from 'react-icons/fa';
 import { SiMongodb } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import Skills from './skills';
+import Skills from './Skills';
 import Contact from './contact/Contact';
 import './home-styles.css'
 
