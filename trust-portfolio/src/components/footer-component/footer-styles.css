@@ -1,17 +1,13 @@
 .footer {
-  background-color: #0f111d;
-  color: #757575;
-  padding: 1rem 2rem;
-  font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   text-align: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 2rem;
+  background-color: #f8fafc;
+  color: #1e293b;
+  border-top: 1px solid #e2e8f0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .footer-content {
@@ -21,84 +17,54 @@
 
 .footer-top {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.footer-links {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.footer-links a {
-  color: #757575;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-weight: 500;
-}
-
-.footer-links a:hover {
-  color: #38bdf8; 
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .footer-socials {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .footer-socials a {
-  color: #757575;
-  font-size: 1.4rem;
-  transition: color 0.3s ease;
+  font-size: 1.6rem;
+  color: #64748b;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-socials a:hover {
-  color: #38bdf8;
+  color: #0ea5e9;
+  transform: translateY(-3px);
 }
 
 .footer h3 {
   font-size: 1rem;
-  font-weight: 400;
-  color: #757575;
+  font-weight: 500;
+  color: #475569;
 }
 
 .footer h3 strong {
-  color: #fff;
-  font-weight: 600;
+  color: #0ea5e9;
+  font-weight: 700;
 }
 
 .footer span {
-  font-size: 1.4em;
+  color: #0ea5e9;
+  font-size: 1.2rem;
   vertical-align: middle;
   margin-right: 0.3rem;
-  color: #38bdf8;
 }
 
 @media (min-width: 768px) {
   .footer {
-    padding: 2rem 4rem;
+    padding: 2.5rem 4rem;
+  }
+
+  .footer h3 {
     font-size: 1.1rem;
   }
-  
-  .footer-top {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-  }
-  
-  .footer-links {
-    gap: 3rem;
-  }
-  
+
   .footer-socials a {
-    font-size: 1.6rem;
-  }
-  
-  .footer h3 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
 }

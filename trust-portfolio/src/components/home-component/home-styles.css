@@ -1,199 +1,103 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
 .home-container {
+  font-family: 'Poppins', sans-serif;
+  min-height: 90vh;
+  background-color: #f1f1ef; /* light neutral */
   display: flex;
-  flex-direction: column;
-  padding: 10rem 4rem 80rem 4rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #222;
-  gap: 2rem; /* added consistent vertical spacing */
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  color: #000030; /* primary dark navy */
 }
 
 .home {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8rem; /* slightly reduced gap for balance */
   max-width: 1100px;
-  margin: 0 auto;
-  padding-top: 0;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .introduction {
-  flex: 1 1 300px;
-  max-width: 400px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem; /* increased gap for better spacing */
+  max-width: 600px;
 }
 
 .introduction p {
-  font-size: 1.5rem;
-  margin-bottom: 0;
-  color: #555;
-  line-height: 1.6; /* better readability */
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 48, 0.7); /* softened primary */
+  margin-bottom: 0.5rem;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
 }
 
 .name {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   font-weight: 900;
+  color: #000030;
   line-height: 1.1;
-  margin: 0;
-  color: #555;
-  animation: fadeInUp 1s ease forwards;
-  opacity: 0;
-  animation-delay: 0.4s;
+  letter-spacing: -1.5px;
 }
 
 .name span {
-  color: #1e90ff;
+  color: #1e90ff; /* highlight blue for < and /> */
 }
 
-.last-name {
-  color: #1e90ff;
-  padding-left: 2rem;
-  animation: fadeInUp 1s ease forwards;
-  opacity: 0;
-  animation-delay: 0.6s;
+.name.last-name {
+  margin-top: -0.7rem;
 }
 
 .second-paragraph {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-top: 0.5rem;
-  color: #333;
-  padding-left: 9.8rem;
-  line-height: 1.5;
+  margin-top: 1.2rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #000030cc; /* dark with 80% opacity */
+  min-height: 60px;
 }
 
 .resume-button {
-  margin-top: 1rem;
-  margin-left: 15.5rem;
-  align-self: flex-start;
+  margin-top: 2.5rem;
+  background-color: #1e90ff;
+  color: #fff !important;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
   display: inline-flex;
   align-items: center;
-  padding: 0.5rem 1.2rem;
-  background-color: #1e90ff;
-  color: white;
-  font-weight: 600;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(30, 144, 255, 0.3);
+  gap: 8px;
+  box-shadow: 0 8px 16px rgba(30, 144, 255, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
 .resume-button:hover {
-  background-color: #0c61d9;
-  color: #333;
+  background-color: #0073e6;
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(30, 144, 255, 0.4);
+  box-shadow: 0 12px 20px rgba(0, 115, 230, 0.5);
 }
 
 .image-container {
-  position: relative;
-  flex: 1 1 350px;
-  max-width: 400px;
-  height: 400px;
-  animation: scaleIn 1s ease forwards;
-  opacity: 0;
-  animation-delay: 0.6s;
+  max-width: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 48, 0.15);
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
 }
 
-/* Circle behind the image */
-.circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 350px;
-  height: 350px;
-  border: 20px solid #1e90ff;
-  /* background: radial-gradient(circle at center, #1e90ff44, transparent 70%); */
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  box-shadow: 0 0 60px rgba(40, 150, 300, 0.5);
+.image-container:hover {
+  transform: translateY(-10px);
 }
 
-/* Crop container for the photo */
-.crop {
-  width: 500px;
-  margin: 0 auto;
-  position: relative;
-  margin-top: -40px;
-}
-
-.trust {
+.image-container img.trust {
   width: 100%;
   height: auto;
+  display: block;
+  border-radius: 20px;
   object-fit: cover;
-}
-
-hr {border: none;
-  height: 2px;
-  z-index: 2;
-  background-color: #555;
-  margin: 0;
-  padding: 0;
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 768px) {
-  .home-container {
-    padding: 4rem 1rem;
-    gap: 2rem; /* consistent vertical spacing */
-  }
-
-  .home {
-    flex-direction: column;
-    gap: 4rem;
-  }
-
-  .introduction {
-    max-width: 100%;
-    text-align: center;
-    align-items: center;
-  }
-
-  .second-paragraph {
-    padding-left: 0;
-    text-align: center;
-  }
-
-  .resume-button {
-    margin: 1rem auto 0;
-  }
-
-  .image-container {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .crop {
-    width: 100%;
-    height: auto;
-  }
-
-  .trust {
-    width: 100%;
-    height: auto;
-  }
-
-  .name {
-    font-size: 2.5rem;
-  }
-
-  .last-name {
-    padding-left: 0;
-  }
 }

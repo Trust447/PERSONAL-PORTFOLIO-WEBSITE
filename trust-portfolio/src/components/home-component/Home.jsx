@@ -3,9 +3,10 @@ import { FaNodeJs, FaReact } from 'react-icons/fa';
 import { SiMongodb } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import Skills from './Skills';
-import Contact from './contact/Contact';
 import './home-styles.css'
+import { DownloadCloud } from 'lucide-react';
+import SkillsSession from './SkillsShowcase';
+import Contact  from './contact/Contact';
 
 const fadeInLeft = {
   initial: { opacity: 0, x: -50 },
@@ -29,7 +30,7 @@ const scaleIn = (delay = 0) => ({
 
 const Home = () => {
   return (
-    <div>
+    <>
       <div id="Home" className="home-container">
         <div className="home">
 
@@ -52,23 +53,18 @@ const Home = () => {
             />
 
             <a
-              href="/Trust Ihemebiri.pdf"
-              download
-              className="resume-button"
-              aria-label="Download Resume"
+            href="/Trust Ihemebiri.pdf"
+            download
+            className="resume-button"
+            aria-label="Download Resume"
             >
-            <img
-              src="https://img.icons8.com/ios-filled/24/000000/download--v1.png"
-              alt="Download icon"
-              style={{ width: '12px', height: '12px', marginRight: '5px' }}
-            />
-              Resume
-          </a>
+            <DownloadCloud size={14} style={{ marginRight: '6px', color: 'white' }} />
+            Resume
+            </a>
           </motion.div>
 
           {/* Image and Skill Icons */}
-          <motion.div className="image-container" {...fadeInRight}>
-            <div className="circle" />  
+          <motion.div className="image-container" {...fadeInRight}> 
             <div className="crop">
               <img
                 className="trust"
@@ -80,13 +76,12 @@ const Home = () => {
           
           </motion.div>
         </div>
-
-        <hr />
       
       </div>
-      <Skills />
-      <Contact />
-    </div>
+
+      <SkillsSession />
+      <Contact/>
+    </>
     
   );
 };
