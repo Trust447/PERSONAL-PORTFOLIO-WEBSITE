@@ -2,9 +2,9 @@
 
 .contact {
   position: relative;
-  background-color: #f9fafb; /* very light gray */
+  background-color: #ececec52; /* very light gray */
   color: #111; /* dark text */
-  padding: 5rem 2rem;
+  padding: 5rem 1rem;
   overflow: hidden;
   width: 100%;
   font-family: 'Poppins', sans-serif;
@@ -34,7 +34,7 @@
 .contact-form {
   background-color: #ffffff;
   border-radius: 1rem;
-  padding: 2.5rem;
+  padding: 2rem;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

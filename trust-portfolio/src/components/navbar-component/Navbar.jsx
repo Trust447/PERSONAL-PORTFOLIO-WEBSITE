@@ -1,33 +1,50 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { Github, Linkedin } from 'lucide-react';
 import "./navbar-styles.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  function toggleMenu() {
-    setIsOpen(prev => !prev);
-  }
+  const toggleMenu = () => setIsOpen(prev => !prev);
+  const closeMenu = () => setIsOpen(false);
 
-  function closeMenu() {
-    setIsOpen(false);
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down, hide navbar
+        setShowNavbar(false);
+      } else {
+        // Scrolling up, show navbar
+        setShowNavbar(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <nav className='navbar'>
+    <nav className={`navbar ${showNavbar ? 'navbar--visible' : 'navbar--hidden'}`}>
+      {/* Your navbar JSX unchanged */}
       <div className="navbar-left">
-        <Link to="/" className='logo'>
+        <a href="#home" className='logo' onClick={closeMenu}>
           <img src="logo.svg" alt="Trusted Ideas" />
-        </Link>
+        </a>
       </div>
 
-      {/* Combined mobile menu */}
+      {/* Mobile menu */}
       <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
         <ul className="nav-links">
-          <li><Link to="/" onClick={closeMenu}>home</Link></li>
-          <li><Link to="/About" onClick={closeMenu}>about</Link></li>
-          <li><Link to="/Project" onClick={closeMenu}>skills</Link></li>
+          <li><a href="#home" onClick={closeMenu}>home</a></li>
+          <li><a href="#about" onClick={closeMenu}>about</a></li>
+          <li><a href="#project" onClick={closeMenu}>skills</a></li>
         </ul>
         <ul className="right-links">
           <li>
@@ -40,16 +57,16 @@ const Navbar = () => {
               <Linkedin size={20} />
             </a>
           </li>
-          <li><Link to="/Contact" className='contact-btn' onClick={closeMenu}>contact Me</Link></li>
+          <li><a href="#contact" className='contact-btn' onClick={closeMenu}>contact Me</a></li>
         </ul>
       </div>
 
       {/* Desktop links */}
       <div className="navbar-center desktop-only">
         <ul className="nav-links">
-          <li><Link to="/" onClick={closeMenu}>home</Link></li>
-          <li><Link to="/About" onClick={closeMenu}>about</Link></li>
-          <li><Link to="/Project" onClick={closeMenu}>skills</Link></li>
+          <li><a href="#home" onClick={closeMenu}>home</a></li>
+          <li><a href="#about" onClick={closeMenu}>about</a></li>
+          <li><a href="#project" onClick={closeMenu}>skills</a></li>
         </ul>
       </div>
 
@@ -65,7 +82,7 @@ const Navbar = () => {
               <Linkedin size={20} />
             </a>
           </li>
-          <li><Link to="/Contact" className='contact-btn'>contact Me</Link></li>
+          <li><a href="#contact" className='contact-btn'>contact Me</a></li>
         </ul>
       </div>
 

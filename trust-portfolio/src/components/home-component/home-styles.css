@@ -1,15 +1,15 @@
-/* Import Poppins font from Google Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
 
 .home-container {
   font-family: 'Poppins', sans-serif;
   min-height: 90vh;
-  background-color: #f1f1ef; /* light neutral */
+  background-color: #f1f1ef; 
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 20px;
-  color: #000030; /* primary dark navy */
+  color: #000030; 
 }
 
 .home {
@@ -28,7 +28,7 @@
 .introduction p {
   font-weight: 600;
   font-size: 1.2rem;
-  color: rgba(0, 0, 48, 0.7); /* softened primary */
+  color: rgba(0, 0, 48, 0.7); 
   margin-bottom: 0.5rem;
   letter-spacing: 1.1px;
   text-transform: uppercase;
@@ -43,7 +43,7 @@
 }
 
 .name span {
-  color: #1e90ff; /* highlight blue for < and /> */
+  color: #1e90ff; 
 }
 
 .name.last-name {
@@ -54,7 +54,7 @@
   margin-top: 1.2rem;
   font-size: 1.7rem;
   font-weight: 700;
-  color: #000030cc; /* dark with 80% opacity */
+  color: #000030cc; 
   min-height: 60px;
 }
 
@@ -88,6 +88,7 @@
   box-shadow: 0 20px 40px rgba(0, 0, 48, 0.15);
   background-color: #ffffff;
   transition: transform 0.3s ease;
+
 }
 
 .image-container:hover {
@@ -100,4 +101,42 @@
   display: block;
   border-radius: 20px;
   object-fit: cover;
+}
+
+@media(max-width: 768px){
+  .home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .introduction{
+    max-width: 100%;
+    line-height: 1;
+  }
+  .introduction h1{
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .name{
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+
+  .second-paragraph{
+    font-size: 1.2rem;
+    min-height: auto;
+  }
+
+  .resume-button{
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+
+  .image-container{
+    max-width: 400px;
+    margin-top: 2rem;
+  }
 }

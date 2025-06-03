@@ -1,7 +1,5 @@
 import React from 'react';
-import { FaNodeJs, FaReact } from 'react-icons/fa';
-import { SiMongodb } from 'react-icons/si';
-import { motion } from 'framer-motion';
+import { animate, motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import './home-styles.css'
 import { DownloadCloud } from 'lucide-react';
@@ -16,10 +14,10 @@ const fadeInLeft = {
 };
 
 const fadeInRight = {
-  initial: { opacity: 0, x: 50 },
-  whileInView: { opacity: 1, x: 0 },
+  initial: { opacity: 0, x: 100 },
+  animate: { opacity: 1, x: 0 },
   transition: { duration: 1.2, ease: 'easeInOut' },
-  viewport: { once: true },
+  // viewport: { once: true },
 };
 
 const scaleIn = (delay = 0) => ({
@@ -65,13 +63,19 @@ const Home = () => {
 
           {/* Image and Skill Icons */}
           <motion.div className="image-container" {...fadeInRight}> 
-            <div className="crop">
-              <img
+              <motion.img
                 className="trust"
+                initial="initial"
+                animate="animate"
+                transition={fadeInRight.transition}
+                variants={{
+                  initial: fadeInRight.initial,
+                  animate: fadeInRight.animate
+                }}
                 src="trust.webp"
                alt="Trust Ihemebiri"
+               {...fadeInRight}
               />
-            </div>
 
           
           </motion.div>
@@ -79,8 +83,8 @@ const Home = () => {
       
       </div>
 
-      <SkillsSession />
-      <Contact/>
+      {/* <SkillsSession />
+      <Contact/> */}
     </>
     
   );
