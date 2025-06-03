@@ -3,78 +3,46 @@ import 'flag-icons/css/flag-icons.min.css';
 import "./about-styles.css"
 
 const About = () => {
-  const cardsRef = useRef([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate");
-            observer.unobserve(entry.target); // Animate only once
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    cardsRef.current.forEach(card => {
-      if (card) observer.observe(card);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  const items = [
-    {
-      id: 'nationality',
-      title: "Nationality",
-      iconClass: "fi fi-ng",
-      label: "Nigeria",
-    },
-    {
-      id: 'education',
-      title: "Education",
-      image: "uniuyo.png",
-      label: "University Of Uyo",
-    },
-    {
-      id: 'language',
-      title: "Language",
-      iconClass: "fi fi-gb",
-      label: "Native",
-    },
-  ];
 
   return (
-    <div id="About" className="about-container">
+    <section id="about" className="about-section">
       <div className="title">
-        <h2>
-          AboutMe <span>()</span>
-        </h2>
+        <h1><span>About</span> Me</h1>
+        <p>
+          I’m a <strong>Software Engineer</strong>, 
+          <strong>Web Designer</strong>, and <strong>Digital Marketer</strong> with over 
+          <strong>3 years of experience</strong> turning bold ideas into functional, user-first digital solutions.
+        </p>
+        <p>
+          My journey into tech started with curiosity and determination. That passion led me to the rigorous 
+          <strong>ALX Software Engineering program</strong>, where I sharpened my skills in real-world development. 
+          Today, I thrive on building all kinds of projects — from personal portfolios to complex dashboards.
+        </p>
+        <p>
+          I combine aesthetics and logic to design and build applications that not only work well, 
+          but also deliver meaningful experiences and business value. Whether you're a brand, startup, 
+          or recruiter — I'm ready to add value to your vision.
+        </p>
       </div>
-      <div className="about-card">
-        {items.map((item, index) => (
-          <div
-            className="card"
-            key={item.id}
-            ref={el => (cardsRef.current[index] = el)}
-          >
-            <h3>
-              <span>{"<"}</span>
-              {item.title}
-              <span>{" />"}</span>
-            </h3>
-            {item.image ? (
-              <img src={item.image} alt={item.label} />
-            ) : (
-              <span className={item.iconClass} style={{ fontSize: "80px" }}></span>
-            )}
-            <h4>{item.label}</h4>
-          </div>
-        ))}
+
+      <div class="about-right">
+        <h3>Tools & Technologies</h3>
+        <ul>
+          <li>JavaScript, TypeScript</li>
+          <li>React, Node.js</li>
+          <li>Python, Flask</li>
+          <li>Figma, Adobe XD</li>
+        </ul>
+
+        <h3>What I Value</h3>
+        <ul>
+          <li>🎯 Creativity & Clean Design</li>
+          <li>⚡ Performance & Scalability</li>
+          <li>🤝 Teamwork & Communication</li>
+          <li>📈 Business Results & User Focus</li>
+        </ul>
       </div>
-    </div>
+    </section>
   );
 };
 export default About;

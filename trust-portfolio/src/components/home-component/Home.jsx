@@ -3,8 +3,8 @@ import { animate, motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import './home-styles.css'
 import { DownloadCloud } from 'lucide-react';
-import SkillsSession from './SkillsShowcase';
-import Contact  from './contact/Contact';
+import SkillsSession from '../skills component/SkillsShowcase';
+import Contact  from '../contact/Contact';
 
 const fadeInLeft = {
   initial: { opacity: 0, x: -50 },
@@ -29,7 +29,7 @@ const scaleIn = (delay = 0) => ({
 const Home = () => {
   return (
     <>
-      <div id="Home" className="home-container">
+      <div id="home" className="home-container">
         <div className="home">
 
         {/* Introduction Section */}
@@ -43,7 +43,7 @@ const Home = () => {
               </h1>
 
             <TypeAnimation
-              sequence={['Software Engineer', 3000, 'Designer', 3000]}
+              sequence={['Software Engineer', 3000, 'Web Designer', 3000, 'Digital Marketer', 3000]}
              wrapper="p"
               className="second-paragraph"
               speed={50}

@@ -1,77 +1,100 @@
-.about-container {
-  background-color: #111320;
-  color: #fff;
-  padding: 5rem 2rem;
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  padding: 80px 20px;
+  background-color: #f9fafb;
+  color: #1c1c2d;
+  font-family: 'Poppins', sans-serif;
+}
+
+.title,
+.about-right {
+  flex: 1 1 450px;
+  max-width: 600px;
+}
+
+.title h1 {
+  font-size: 2.8rem;
+  color: #000030;
+  margin-bottom: 20px;
   position: relative;
-  overflow: hidden;
 }
 
-.about-container .title {
-  text-align: center;
-  margin-bottom: 4rem;
+.title h1 span {
+  color: #1e90ff;
+  position: relative;
 }
 
-.about-container .title h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
+.title p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: 400;
 }
 
-.about-container .title span {
-  color: #38bdf8;
+.about-right {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
 }
 
-.about-card {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
+.about-right:hover {
+  transform: translateY(-6px);
 }
 
-.card {
-  background-color: #111;
-  padding: 2rem 1.5rem;
-  border-radius: 1.5rem;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(30px);
+.about-right h3 {
+  font-size: 1.3rem;
+  color: #1e90ff;
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+  position: relative;
 }
 
-.card.animate {
-  opacity: 1;
-  transform: translateY(0);
+.about-right ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.2rem;
 }
 
-.card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-}
-
-.card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  color: #38bdf8;
-}
-
-.card h3 span {
-  color: #fff;
-}
-
-.card img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 1rem;
-}
-
-.card .fi {
-  margin-bottom: 1rem;
-}
-
-.card h4 {
+.about-right ul li {
   font-size: 1rem;
-  color: #ddd;
-} 
+  margin: 0.6rem 0;
+  color: #444;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.about-right ul li::before {
+  content: '•';
+  color: #1e90ff;
+  font-size: 1.3rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .title h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .title,
+  .about-right {
+    max-width: 100%;
+  }
+
+  .about-right {
+    padding: 24px;
+  }
+}

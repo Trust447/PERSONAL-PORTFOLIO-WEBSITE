@@ -44,7 +44,7 @@ const Navbar = () => {
         <ul className="nav-links">
           <li><a href="#home" onClick={closeMenu}>home</a></li>
           <li><a href="#about" onClick={closeMenu}>about</a></li>
-          <li><a href="#project" onClick={closeMenu}>skills</a></li>
+          <li><a href="#project" onClick={closeMenu}>projects</a></li>
         </ul>
         <ul className="right-links">
           <li>
@@ -66,7 +66,7 @@ const Navbar = () => {
         <ul className="nav-links">
           <li><a href="#home" onClick={closeMenu}>home</a></li>
           <li><a href="#about" onClick={closeMenu}>about</a></li>
-          <li><a href="#project" onClick={closeMenu}>skills</a></li>
+          <li><a href="#project" onClick={closeMenu}>projects</a></li>
         </ul>
       </div>
 
