@@ -17,10 +17,10 @@ const Footer = () => {
             <a href="https://linkedin.com/in/trust-ihemebiri" target="_blank" rel="noreferrer" aria-label="LinkedIn">
               <FaLinkedinIn />
             </a>
-            <a href="https://instagram.com/trustihemebiri" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <a href="https://instagram.com/trustedideaslab" target="_blank" rel="noreferrer" aria-label="Instagram">
               <FaInstagram />
             </a>
-            <a href="https://tiktok.com/@trustisaac8?" target="_blank" rel="noreferrer" aria-label="TikTok">
+            <a href="https://tiktok.com/@trustedideas" target="_blank" rel="noreferrer" aria-label="TikTok">
               <FaTiktok />
             </a>
           </div>
