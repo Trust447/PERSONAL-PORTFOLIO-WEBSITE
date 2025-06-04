@@ -1,7 +1,7 @@
 /* General Container */
 .home-container {
   background-color: #f1f1ef;
-  color: white;
+  color: #000030;
   min-height: 100vh;
   padding: 60px 20px;
   display: flex;
