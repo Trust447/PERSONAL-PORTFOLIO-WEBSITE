@@ -4,26 +4,18 @@ import { TypeAnimation } from 'react-type-animation';
 import './home-styles.css';
 import { DownloadCloud } from 'lucide-react';
 
-const fadeInLeft = {
-  initial: { opacity: 0, x: -50 },
-  whileInView: { opacity: 1, x: 0 },
-  transition: { duration: 1, ease: 'easeOut' },
-  viewport: { once: true },
-};
-
-const fadeInRight = {
-  initial: { opacity: 0, x: 50 },
-  whileInView: { opacity: 1, x: 0 },
-  transition: { duration: 1, ease: 'easeOut' },
-  viewport: { once: true },
-};
-
 const Home = () => {
   return (
     <section id="home" className="home-container">
       <div className="home-content">
         {/* === Left Section === */}
-        <motion.div className="home-text" {...fadeInLeft}>
+        <motion.div
+          className="home-text"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: [0.25, 0.8, 0.25, 1] }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <p className="intro">Hello, I am</p>
 
           <h1 className="name">
@@ -53,7 +45,13 @@ const Home = () => {
         </motion.div>
 
         {/* === Right Section === */}
-        <motion.div className="home-image" {...fadeInRight}>
+        <motion.div
+          className="home-image"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: [0.25, 0.8, 0.25, 1] }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <motion.img
             src="trust.webp"
             alt="Trust Ihemebiri"

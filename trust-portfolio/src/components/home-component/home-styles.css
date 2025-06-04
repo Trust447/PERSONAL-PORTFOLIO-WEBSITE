@@ -23,6 +23,7 @@
 .home-text {
   flex: 1;
   min-width: 280px;
+  will-change: transform, opacity;
 }
 
 .intro {
@@ -100,12 +101,12 @@
   justify-content: center;
   min-width: 280px;
   background-color: #f8fafc;
-} 
+  will-change: transform, opacity;
+}
 
 .profile-image {
   max-width: 350px;
   width: 100%;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
 }
