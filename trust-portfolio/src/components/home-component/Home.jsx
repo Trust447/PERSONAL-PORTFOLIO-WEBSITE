@@ -12,9 +12,10 @@ const fadeInLeft = {
 };
 
 const fadeInRight = {
-  initial: { opacity: 0, x: 100 },
-  animate: { opacity: 1, x: 0 },
-  transition: { duration: 1.2, ease: 'easeInOut' },
+  initial: { opacity: 0, x: 80 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 1.1, ease: 'easeOut' },
+  viewport: { once: true },
 };
 
 const Home = () => {
@@ -33,19 +34,21 @@ const Home = () => {
           </h1>
 
           <TypeAnimation
-            sequence={['Software Engineer', 3000, 'Web Designer', 3000, 'Digital Marketer', 3000]}
+            sequence={[
+              'Software Engineer', 3000,
+              'Web Designer', 3000,
+              'Digital Marketer', 3000,
+            ]}
             wrapper="p"
             className="second-paragraph"
             speed={50}
             repeat={Infinity}
           />
 
-          {/* === Buttons === */}
           <div className="buttons">
             <a href="#contact" className="cta-button">
               Get in Touch
             </a>
-
             <a
               href="/Trust Ihemebiri.pdf"
               download
@@ -62,15 +65,12 @@ const Home = () => {
         <motion.div className="image-container" {...fadeInRight}>
           <motion.img
             className="trust"
-            initial="initial"
-            animate="animate"
-            transition={fadeInRight.transition}
-            variants={{
-              initial: fadeInRight.initial,
-              animate: fadeInRight.animate,
-            }}
             src="trust.webp"
             alt="Trust Ihemebiri"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: 'easeOut', delay: 0.2 }}
+            viewport={{ once: true }}
           />
         </motion.div>
       </div>
