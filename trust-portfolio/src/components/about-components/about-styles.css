@@ -1,100 +1,62 @@
 .about-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4rem;
-  padding: 80px 20px;
-  background-color: #f9fafb;
-  color: #1c1c2d;
   font-family: 'Poppins', sans-serif;
-}
-
-.title,
-.about-right {
-  flex: 1 1 450px;
-  max-width: 600px;
-}
-
-.title h1 {
-  font-size: 2.8rem;
+  background-color: #f1f1ef;
   color: #000030;
-  margin-bottom: 20px;
-  position: relative;
+  padding: 80px 20px;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
-.title h1 span {
-  color: #1e90ff;
-  position: relative;
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-.title p {
-  font-size: 1.1rem;
-  line-height: 1.7;
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.about-left, .about-right {
+  flex: 1;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 900;
   margin-bottom: 1.5rem;
-  color: #333;
-  font-weight: 400;
+  color: #000030;
 }
 
-.about-right {
-  background-color: #ffffff;
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
-  transition: transform 0.3s ease;
-}
-
-.about-right:hover {
-  transform: translateY(-6px);
-}
-
-.about-right h3 {
-  font-size: 1.3rem;
+.about-title span {
   color: #1e90ff;
-  margin-top: 1.2rem;
-  margin-bottom: 0.6rem;
-  position: relative;
+}
+
+.about-left p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  color: rgba(0, 0, 48, 0.85);
+}
+
+.about-subheading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e90ff;
 }
 
 .about-right ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 1.2rem;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
 }
 
-.about-right ul li {
+.about-right li {
   font-size: 1rem;
-  margin: 0.6rem 0;
-  color: #444;
-  padding-left: 1.2rem;
-  position: relative;
-}
-
-.about-right ul li::before {
-  content: '•';
-  color: #1e90ff;
-  font-size: 1.3rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-    padding: 50px 20px;
-  }
-
-  .title h1 {
-    font-size: 2.2rem;
-    text-align: center;
-  }
-
-  .title,
-  .about-right {
-    max-width: 100%;
-  }
-
-  .about-right {
-    padding: 24px;
-  }
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
