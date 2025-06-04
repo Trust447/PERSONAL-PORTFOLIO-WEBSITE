@@ -37,6 +37,9 @@
   margin: 0;
   line-height: 1.1;
 }
+.name span {
+  color: #1e90ff;
+}
 
 .last-name {
   margin-bottom: 1rem;
@@ -44,7 +47,7 @@
 
 .typing {
   font-size: 1.2rem;
-  color: #00bfff;
+  color: #0e362d;
   margin-top: 10px;
   font-style: italic;
 }
@@ -75,15 +78,15 @@
 }
 
 .cta-button:hover {
-  background-color: #0d6efd;
+  background-color: #0e362d;
 }
 
 .resume-button {
-  background-color: #444;
+  background-color: #0e362d;
 }
 
 .resume-button:hover {
-  background-color: #666;
+  background-color: #1e90ff;
 }
 
 .download-icon {
