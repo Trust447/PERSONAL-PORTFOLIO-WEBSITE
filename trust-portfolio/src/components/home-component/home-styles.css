@@ -96,7 +96,8 @@
   display: flex;
   justify-content: center;
   min-width: 280px;
-}
+  background-colo: #000030;
+}  ;
 
 .profile-image {
   max-width: 350px;
